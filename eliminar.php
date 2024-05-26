@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $cedula = $_POST['cedula'];
 
     // Preparar y ejecutar la consulta de eliminación
-    $sql = "DELETE FROM personas WHERE cedula='$cedula'";
+    $sql = "DELETE FROM personas1 WHERE cedula='$cedula'";
 
     // Verificar si la consulta se ejecutó correctamente
     if ($conexion->query($sql) === TRUE) {

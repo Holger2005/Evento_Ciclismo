@@ -3,7 +3,7 @@
 include 'conexion.php';
 
 // Check if the request method is POST
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] = "POST") {
     // Retrieve form data
     $cedula = $_POST["cedula"];
     $nombre = $_POST["nombre"];
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $rol = $_POST["rol"];
 
     // Prepare and execute the query
-    $sql = "INSERT INTO personas (cedula, nombre, apellido, correo, fecha, nroinv, rol) VALUES ('$cedula', '$nombre', '$apellido', '$correo', '$fecha', '$nroinv', '$rol')";
+    $sql = "INSERT INTO personas1 (cedula, nombre, apellido, correo, fecha, nroinv, rol) VALUES ('$cedula', '$nombre', '$apellido', '$correo', '$fecha', '$nroinv', '$rol')";
 
     if(mysqli_query($conexion,$sql)) {
         echo "Persona creada";
